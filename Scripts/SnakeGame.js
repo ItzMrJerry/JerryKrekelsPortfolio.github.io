@@ -2,7 +2,7 @@ window.onload=function() {
     canv=document.getElementById("gc");
     ctx=canv.getContext("2d");
     document.addEventListener("keydown",keyPush);
-    setInterval(game,1000/15);
+    setInterval(game,1000/10);
     arrowkeysImg = document.getElementById("ArrowKeys");
 }
 posX=posY=10;
@@ -26,7 +26,8 @@ function game() {
     if(posY>tc-1) {
         posY= 0;
     }
-    ctx.fillStyle="black";
+    ctx.fillStyle="#242b3d";
+    //ctx.fillStyle="black";
     ctx.fillRect(0,0,canv.width,canv.height);
  
     ctx.fillStyle="lime";
@@ -67,3 +68,11 @@ function keyPush(evt) {
             break;
     }
 }
+
+// FitToContainer(canv);
+// function FitToContainer(canvas){
+//     canvas.style.width='100%';
+//   canvas.style.height='100%';
+//   canvas.width  = canvas.offsetWidth;
+//   canvas.height = canvas.offsetHeight;
+// }

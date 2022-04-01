@@ -13,12 +13,14 @@
 <body onscroll="WhenScrolling()">
     <div id="HomePage">
         <div class="IntroductionText">
+            
             <h3>Hello</h3>
             <h1>I'm Jerry</h1>
             <h2>Software Developer</h2>
-            <button type="button"><a class="AboutMeButton" href="#AboutMePage">More About me</a></button>
+            <button onclick="ScrollToDiv('AboutMePage')" type="button"><a class="AboutMeButton" href="#AboutMePage">More About me</a></button>
         </div>
         <canvas id="gc" width="400%" height="400%" style="display: none;"></canvas>
+        
         <img id="ArrowKeys" src="Images/wasd.png" alt="">
         <!--
         <div style="display: none;" id="GameContainer">
@@ -29,23 +31,38 @@
     </div>
     <div id="AboutMePage">
         <h1>About me</h1>
+        <button><a href="cv/JerryKrekels_CV.pdf" download="cv/JerryKrekels_CV.pdf">Download CV</a></button>
     </div>
-    <div id="PortfolioPage">
+    <div  id="PortfolioPage">
         <h2>0</h2>
         <h1>My work</h1>
+
+        <div  id="overlay">
+            <h1 id="PortfolioH1"></h1>
+            <img id="PortfolioImg" src="" alt=""><p></p>
+            <a id="PreviousWork" onclick="ShowNeighbour('false')"><img src="Images/arrow.png" alt=""></a>
+            <a id="NextWork" onclick="ShowNeighbour('true')"><img src="Images/arrow.png" alt=""></a>
+            <!-- <button id="PreviousWork" onclick="ShowNeighbour('false')"><img src="Images/arrow.png" alt=""></button> -->
+            <!-- <button id="NextWork" onclick="ShowNeighbour('true')">Next</button> -->
+            <p id="PortfolioWorkText"></p>
+        </div>
+
         <div class="row">
-            <div class="Collum"><a href=""><img src="Images/Mulitplayer_test.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a href=""><img src="Images/ProjectsRoestIMG.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a href=""><img src="Images/SpaceRocketSimulator.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('0')"><img src="Images/Mulitplayer_test.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('1')" ><img src="Images/ProjectsRoestIMG.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('2')"><img src="Images/SpaceRocketSimulator.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
         </div>
         <div class="row">
-            <div class="Collum"><a href=""><img src="Images/Mulitplayer_test.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a href=""><img src="Images/ProjectsRoestIMG.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a href=""><img src="Images/SpaceRocketSimulator.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('3')"><img src="Images/Mulitplayer_test.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('4')"><img src="Images/ProjectsRoestIMG.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('5')"><img src="Images/SpaceRocketSimulator.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
         </div>
     </div>
     <div id="ContactPage">
         <h1>Contact</h1>
+        <div class="LinkBar">
+            <h4>JERRY KREKELS</h4>
+        </div>
     </div>
     <div class="DropMenu">
         <button onclick="myfunction()" id="circle">
