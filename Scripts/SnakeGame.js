@@ -28,6 +28,7 @@ function game() {
     }
     ctx.fillStyle="#242b3d";
     //ctx.fillStyle="black";
+    //FitToContainer(canv);
     ctx.fillRect(0,0,canv.width,canv.height);
  
     ctx.fillStyle="lime";
@@ -71,8 +72,8 @@ function keyPush(evt) {
 
 // FitToContainer(canv);
 // function FitToContainer(canvas){
-//     canvas.style.width='100%';
-//   canvas.style.height='100%';
+//     canvas.style.width='40%';
+//   canvas.style.height="40%";
 //   canvas.width  = canvas.offsetWidth;
 //   canvas.height = canvas.offsetHeight;
 // }

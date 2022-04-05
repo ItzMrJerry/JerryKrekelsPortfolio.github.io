@@ -111,7 +111,20 @@ html {
     
     
 }
-
+.AboutMeInfo{
+  height: 100px;
+  width: 90vh;
+  margin-left: 5vh;
+  float:  left;
+  font-weight:bold;
+}
+#AboutMeIMG{
+  margin-left: 20vh;
+  width: 30vh;
+  float:  left;
+  border-radius: 0.5vh;
+  box-shadow: 2px -2px 3px rgba(18, 20, 32, 0.74);
+}
 #AboutMePage button{
   width: 21vh;
     height: 5vh;
@@ -138,10 +151,18 @@ html {
     width: 100%;
     height: 100vh;
     box-shadow: 2px 2px 10px black;
+
+
     background-image:url("HomePagePDN4k.png");
-    background-repeat:  repeat-x;
+    background-repeat: repeat-x;
     background-position:1350 -150;
+    background-position:60vh -15vh;
     background-size: 100% 110vh;
+
+    /* background-image:url("HomePagePDN4k.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100% 110vh; */
     
     /*box-shadow: 0px 10px 20px 40px #242B3D;*/
 }
@@ -310,18 +331,19 @@ height: 200px;
     
 }
 #circle {
-    width: 60px;
-    height: 60px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
+    width: 6.5vh;
+    height: 6.5vh;
+
+    -webkit-border-radius: 4vh;
+    -moz-border-radius: 4vh;
+    border-radius: 4vh;
     background: #1c2230;
     float:  right;
     box-shadow: 2px -2px 3px rgba(18, 20, 32, 0.74);
   }
 #MenuButton{
-    width: 35px;
-    height: 35px;
+    width: 3.8vh;
+    height: 3.8vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -353,3 +375,96 @@ nav{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 200%;
   }
+
+
+
+
+
+
+
+
+
+
+
+  /* Skill Bar CSS */
+
+.wrapper{
+    width: 40%;
+    min-width: 590px;
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 30%;
+    top: 20%;
+
+    font-size: 2vh;
+}
+.container{
+    width: 100%;
+    height: 20vh;
+    border-radius: 10px;
+} 
+.container *{
+    font-family: "Poppins",sans-serif;
+    color: black;
+    font-weight: 500;
+}
+
+
+.skills:not(:last-child){
+    margin-bottom: 3vh;
+}
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bar{
+    position: relative;
+ 
+    border: 2px solid #0d96e0;
+ 
+  border-radius: 3vh;
+  
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 1vh;
+    border-radius: 10px;
+    background-color: #0d96e0;
+   
+ 
+}
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 80%;
+    }
+}
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 75%;
+    }
+}
+#jQuery-bar{
+    animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill{
+    100%{
+        width: 50%;
+    }
+} 

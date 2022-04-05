@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerry Krekels - Portfolio Website</title>
-    <script defer src="Scripts/NavMenu.js"></script>
+    <script def src="Scripts/NavMenu.js"></script>
     <script defer src="Scripts/SnakeGame.js"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">  
@@ -19,7 +19,7 @@
             <h2>Software Developer</h2>
             <button onclick="ScrollToDiv('AboutMePage')" type="button"><a class="AboutMeButton" href="#AboutMePage">More About me</a></button>
         </div>
-        <canvas id="gc" width="400%" height="400%" style="display: none;"></canvas>
+        <canvas id="gc" width="400" height="400" style="display: none;"></canvas>
         
         <img id="ArrowKeys" src="Images/wasd.png" alt="">
         <!--
@@ -31,7 +31,57 @@
     </div>
     <div id="AboutMePage">
         <h1>About me</h1>
-        <button><a href="cv/JerryKrekels_CV.pdf" download="cv/JerryKrekels_CV.pdf">Download CV</a></button>
+        <img id="AboutMeIMG" src="Images/ProfilePic.png" alt="">
+        <div class="AboutMeInfo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit atque vero optio libero ab cumque! Nesciunt assumenda, et ratione ex aut, dolorem praesentium illo laboriosam natus laborum quia distinctio!
+            Quam ipsam fuga, perferendis quis at culpa recusandae voluptas nam? Quidem iste ratione numquam exercitationem doloribus nihil deserunt, nam repellat, laborum alias libero, dolores illum enim. Laudantium iusto velit recusandae!
+            Asperiores, sit incidunt facere ipsum, perspiciatis vel praesentium reiciendis voluptates nam optio fuga expedita ab excepturi! Earum, totam quidem quod corporis, tempore alias dicta, sapiente fuga autem temporibus ullam qui?
+            Perferendis quasi neque repellat labore iure est dignissimos, dicta culpa rerum libero nesciunt dolore deserunt temporibus ex adipisci tenetur quae nisi beatae! Molestiae facere quia soluta eum. Quos, nemo totam.
+            Illum quibusdam ipsa rem iure, suscipit dolorem explicabo tempore minus saepe similique velit maiores quasi nesciunt, neque distinctio aliquid quia veniam est sapiente nemo laudantium mollitia minima. Similique, reprehenderit assumenda?</p>
+            <button><a href="cv/JerryKrekels_CV.pdf" download="cv/JerryKrekels_CV.pdf">Download CV</a></button>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="skills">
+                    
+                    <div class="details">
+                        <span>unity</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="html-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <span>C#</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="css-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <span>Javascript</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="js-bar"></div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="details">
+                        <span>Python</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="jQuery-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div  id="PortfolioPage">
         <h2>0</h2>
@@ -60,14 +110,16 @@
     </div>
     <div id="ContactPage">
         <h1>Contact</h1>
+        <div id="Contact"><button>Email</button></div>
         <div class="LinkBar">
             <h4>JERRY KREKELS</h4>
         </div>
     </div>
+      
     <div class="DropMenu">
         <button onclick="myfunction()" id="circle">
             <img id="MenuButton" src="Images/MenuButton.png" alt="">
-        </button>
+        </button>   
         <nav id="NavMenu" style="display: none;">
             <ul>
               <li><a onclick="myfunction()" href="#HomePage">Home</a></li>
@@ -76,6 +128,6 @@
               <li><a onclick="myfunction()" href="#ContactPage">contact</a></li>
             </ul>
         </nav>
-    </div>  
+    </div>
 </body>
 </html>
