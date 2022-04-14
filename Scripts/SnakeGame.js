@@ -5,6 +5,7 @@ window.onload=function() {
     setInterval(game,1000/10);
     arrowkeysImg = document.getElementById("ArrowKeys");
 }
+Gameisopen = false;
 posX=posY=10;
 gs=tc=20;
 appleX=appleY=15;
@@ -52,28 +53,48 @@ function game() {
     ctx.fillRect(appleX*gs,appleY*gs,gs-2,gs-2);
 }
 function keyPush(evt) {
-    arrowkeysImg.style.display = "none";
-    canv.style.display = "block";
+    
     switch(evt.keyCode) {
         case 65:
             DirX=-1;DirY=0;
+            arrowkeysImg.style.display = "none";
+            canv.style.display = "block";
+            ResizeGame();
             break;
         case 87:    
             DirX=0;DirY=-1;
+            arrowkeysImg.style.display = "none";
+            canv.style.display = "block";
+            ResizeGame();
             break;
         case 68:
             DirX=1;DirY=0;
+            arrowkeysImg.style.display = "none";
+            canv.style.display = "block";
+            ResizeGame();
             break;
         case 83:
             DirX=0;DirY=1;
+            arrowkeysImg.style.display = "none";
+            canv.style.display = "block";
+            ResizeGame();
             break;
     }
 }
+window.addEventListener('scroll', FitToContainer(canv));
 
-// FitToContainer(canv);
-// function FitToContainer(canvas){
-//     canvas.style.width='40%';
-//   canvas.style.height="40%";
-//   canvas.width  = canvas.offsetWidth;
-//   canvas.height = canvas.offsetHeight;
-// }
+function ResizeGame(){
+    if (!Gameisopen){
+        FitToContainer(canv);
+        Gameisopen = true;
+    } 
+        
+
+}
+
+function FitToContainer(canvas){
+    canvas.style.width='41vh';
+    canvas.style.height="41vh";
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}

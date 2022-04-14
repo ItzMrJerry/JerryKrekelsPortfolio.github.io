@@ -10,16 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="stylesheet" href="css/StyleSheet.css">
 </head>
-<body onscroll="WhenScrolling()">
+<body onscroll="WhenScrolling()" >
     <div id="HomePage">
         <div class="IntroductionText">
             
-            <h3>Hello</h3>
-            <h1>I'm Jerry</h1>
+            <h3>Hallo</h3>
+            <h1>Ik ben Jerry</h1>
             <h2>Software Developer</h2>
-            <button onclick="ScrollToDiv('AboutMePage')" type="button"><a class="AboutMeButton" href="#AboutMePage">More About me</a></button>
+            <button onclick="ScrollToDiv('AboutMePage')" type="button"><a class="AboutMeButton" href="#AboutMePage">Over mij</a></button>
         </div>
-        <canvas id="gc" width="400" height="400" style="display: none;"></canvas>
+        <canvas id="gc"  style="display: none;"></canvas>
         
         <img id="ArrowKeys" src="Images/wasd.png" alt="">
         <!--
@@ -30,62 +30,40 @@
         </div>
     </div>
     <div id="AboutMePage">
-        <h1>About me</h1>
+        <h1>Over mij</h1>
         <img id="AboutMeIMG" src="Images/ProfilePic.png" alt="">
         <div class="AboutMeInfo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit atque vero optio libero ab cumque! Nesciunt assumenda, et ratione ex aut, dolorem praesentium illo laboriosam natus laborum quia distinctio!
-            Quam ipsam fuga, perferendis quis at culpa recusandae voluptas nam? Quidem iste ratione numquam exercitationem doloribus nihil deserunt, nam repellat, laborum alias libero, dolores illum enim. Laudantium iusto velit recusandae!
-            Asperiores, sit incidunt facere ipsum, perspiciatis vel praesentium reiciendis voluptates nam optio fuga expedita ab excepturi! Earum, totam quidem quod corporis, tempore alias dicta, sapiente fuga autem temporibus ullam qui?
-            Perferendis quasi neque repellat labore iure est dignissimos, dicta culpa rerum libero nesciunt dolore deserunt temporibus ex adipisci tenetur quae nisi beatae! Molestiae facere quia soluta eum. Quos, nemo totam.
-            Illum quibusdam ipsa rem iure, suscipit dolorem explicabo tempore minus saepe similique velit maiores quasi nesciunt, neque distinctio aliquid quia veniam est sapiente nemo laudantium mollitia minima. Similique, reprehenderit assumenda?</p>
+            <p>Mijn naam is Jerry Krekels en hier zijn wat dingen over mij. Zo lang ik al weet ben ik erg gëinterseerd geweest in gamen en computers.
+                 En mijn broer die zelf ook een software developer is heeft mij Unity laten zien, hierin hadden wij samen een game in gemaakt.
+                  En sinds toen was ik elke week bezig met kleine projectjes waardoor ik goede kennis heb gemaakt met de engine.
+                   Ik ben erg gemotiveerd in mijn vak en heb veel plezier om nieuwe dingen uit te proberen en te leren. <br><br> Hier is een Download link naar mijn CV</p>
             <button><a href="cv/JerryKrekels_CV.pdf" download="cv/JerryKrekels_CV.pdf">Download CV</a></button>
         </div>
-        <div class="wrapper">
-            <div class="container">
-                <div class="skills">
-                    
-                    <div class="details">
-                        <span>unity</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="html-bar"></div>
-                    </div>
+        <div class="Skills">
+            <h2>Skills</h1>
+                <div id="Skill">
+                    <img src="Images/unity-icon-5.jpg" alt=""><p>Unity: Ik heb al meer dan 3 jaar evaring met Unity. <br> En heb al tientallen projecten gemaakt waardoor ik veel kennis heb opgenomen.</p>
                 </div>
-                <div class="skills">
-                    <div class="details">
-                        <span>C#</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="css-bar"></div>
-                    </div>
+                <div id="Skill">
+                    <img src="Images/csharp-logo.png" alt=""><p>C#: Ik heb al meer dan 3 jaar evaring met C#. <br> De eerste game met een echte programeer taal die ik gemaakt heb was in C# console.</p>
                 </div>
-                <div class="skills">
-                    <div class="details">
-                        <span>Javascript</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="js-bar"></div>
-                    </div>
+                <div id="Skill">
+                    <img src="Images/unity-icon-5.jpg" alt=""><p>VR: Ik heb hier een half jaar evaring mee. <br> Ik had een Basketbal game met physics gemaakt op unity. En een mooie scene met interactable objects</p>
                 </div>
-                <div class="skills">
-                    <div class="details">
-                        <span>Python</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="jQuery-bar"></div>
-                    </div>
+                <div id="Skill">
+                    <img src="Images/HTML5_logo_black.svg.png" alt=""><p>HTML/CSS: Ik heb hier 2 jaar evaring mee. <br> En heb al meerdere Portfolio pagina's gemaakt en kan werken met bootstrap.</p>
                 </div>
-            </div>
+                <div id="Skill">
+                    <img src="Images/Javascript.png" alt=""><p>JavaScript: Ik heb hier 2 jaar evaring mee. <br>Ik heb al meerdere web games gemaakt net zoals de snake game hierboven en een CookieClicker.</p>
+                </div>
+
+
         </div>
 
     </div>
-    <div  id="PortfolioPage">
+    <div id="PortfolioPage">
         <h2>0</h2>
-        <h1>My work</h1>
+        <h1>Mijn werk</h1>
 
         <div  id="overlay">
             <h1 id="PortfolioH1"></h1>
@@ -94,23 +72,48 @@
             <a id="NextWork" onclick="ShowNeighbour('true')"><img src="Images/arrow.png" alt=""></a>
             <!-- <button id="PreviousWork" onclick="ShowNeighbour('false')"><img src="Images/arrow.png" alt=""></button> -->
             <!-- <button id="NextWork" onclick="ShowNeighbour('true')">Next</button> -->
-            <p id="PortfolioWorkText"></p>
+            <div id="PortfolioWorkTextHolder">
+                <p id="PortfolioWorkText"></p>
+
+            </div>
         </div>
 
         <div class="row">
-            <div class="Collum"><a onclick="displayWork('0')"><img src="Images/Mulitplayer_test.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a onclick="displayWork('1')" ><img src="Images/ProjectsRoestIMG.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a onclick="displayWork('2')"><img src="Images/SpaceRocketSimulator.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('0')"><img src="Images/LunchRushThumbnail.png" alt=""> <img class="Icon" src="Images/LunchRushIcon.jpg" alt=""> </a><p>Lunch Rush</p></div>
+            <div class="Collum"><a onclick="displayWork('1')" ><img src="Images/CellThumbnail.png" alt=""> <img class="Icon" src="Images/CellBattleIcon.png" alt=""> </a><p style="color: black;">Cell Battle</p></div>
+            <div class="Collum"><a onclick="displayWork('2')"><img src="Images/ZombieSimulatorThumbnail.png" alt=""> <img class="Icon" src="Images/ZombieSimulatorIcon.png" alt=""> </a><p>Zombie Simulator</p></div>
         </div>
         <div class="row">
-            <div class="Collum"><a onclick="displayWork('3')"><img src="Images/Mulitplayer_test.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a onclick="displayWork('4')"><img src="Images/ProjectsRoestIMG.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
-            <div class="Collum"><a onclick="displayWork('5')"><img src="Images/SpaceRocketSimulator.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Mulitplayer Game</p></div>
+            <div class="Collum"><a onclick="displayWork('3')"><img src="Images/SwingBackThumbnail.png" alt=""> <img class="Icon" src="Images/Multiplayericon.png" alt=""> </a><p>Swing Back</p></div>
+            <div class="Collum"><a onclick="displayWork('4')"><img src="Images/CubeCraft.png" alt=""> <img class="Icon" src="Images/CubeCraftIcon.jpg" alt=""> </a><p>Cube Craft</p></div>
+            <div class="Collum"><a onclick="displayWork('5')"><img src="Images/TodoApp.png" alt=""> <img class="Icon" src="Images/todoappIcon.png" alt=""> </a><p style="color: black;">ToDoApp</p></div>
         </div>
     </div>
     <div id="ContactPage">
         <h1>Contact</h1>
-        <div id="Contact"><button>Email</button></div>
+        <div id="ContactMail">
+                <h2>Contact mij</h2>
+                <h5>naar JerryKrekels@hotmail.com</h3>
+                    <div id="ContactMailPhone">
+                        <img src="Images/ContactPhone.png" alt="">
+                        <p>	+31 6 53339796</p>
+                    </div>
+                    
+                    
+            <form  action="mailto:JerryKrekels@hotmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+                name="EmailForm">
+                Naam:<br>
+                <input type="text" size="19" name="Contact-Name"><br><br>
+                Email:<br>
+                <input type="email" name="Contact-Email"><br><br> 
+                Bericht:<br> 
+                <textarea name="Contact-Message" rows="6″ cols="20″>
+                </textarea><br><br> 
+                <button type="submit" value="Submit">Stuur Email</button>
+            </form>  
+        </div>
         <div class="LinkBar">
             <h4>JERRY KREKELS</h4>
         </div>
@@ -125,7 +128,7 @@
               <li><a onclick="myfunction()" href="#HomePage">Home</a></li>
               <li><a onclick="myfunction()" href="#AboutMePage">About me</a></li>
               <li><a onclick="myfunction()" href="#PortfolioPage">Portfolio</a></li>
-              <li><a onclick="myfunction()" href="#ContactPage">contact</a></li>
+              <li><a onclick="myfunction()" href="#ContactPage">Contact</a></li>
             </ul>
         </nav>
     </div>
