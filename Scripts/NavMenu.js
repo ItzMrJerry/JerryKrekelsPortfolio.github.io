@@ -14,16 +14,16 @@ let work2 = new WorkPiece("CellThumbnail.png",
 "Cell Battle was een random project die ik gemaakt had omdat mij het leuk leek om een eigen Agar.io na temaken. het is SinglePlayer maar voor de rest is alles heel percies na gemaakt als de echte Agar.io zoals cells die door de map spawnen, het splitsen van de speler met een limit als je te klein bent, het mergen na een tijd als je gesplitst was, de oppervlakte van een cell wordt correct toegevoegt en de spelers oppervlakte"
 ,"Cell Battle");
 let work3 = new WorkPiece("ZombieSimulatorThumbnail.png",
-"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit atque vero optio libero ab cumque! Nesciunt assumenda, et ratione ex aut, dolorem praesentium illo laboriosam natus laborum quia distinctio! Quam ipsam fuga"
+"Zombie Simulator was een project van een jaar geleden waar ik probeerde Call of duty Zombies na temaken. In dit project heb ik heel veel verschillenden dingen geleerd zoals Unity path finding systeem NavMesh, shaders Graph, animation tree en level design en nog een heleboel kleinere dingen."
 ,"Zombie Simulator");
 let work4 = new WorkPiece("SwingBackThumbnail.png",
-"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit atque vero optio libero ab cumque! Nesciunt assumenda, et ratione ex aut, dolorem praesentium illo laboriosam natus laborum quia distinctio! Quam ipsam fuga"
+"Swing back is een mobile game waar je moet slingeren naar de finish line alleen de swing mechanic is anders dan een touw het is eerder een arm die samen trekt. Hiermee kan je hele interessante level design maken wat je normaal niet ziet van swing games."
 ,"SwingBack");
 let work5 = new WorkPiece("CubeCraft.png",
-"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit atque vero optio libero ab cumque! Nesciunt assumenda, et ratione ex aut, dolorem praesentium illo laboriosam natus laborum quia distinctio! Quam ipsam fuga"
+"CubeCraft is een project die ik een twee dagen had gemaakt het is een minecraft clone met hele simpele terrein generatie met een vaste groote waar je een heleboel blokken kan plaatsen en breken. Dit was wel meer een test project en is voor de rest niet erg geoptimaliseerd maar heb als nog veel geleerd."
 ,"CubeCraft");
 let work6 = new WorkPiece("TodoApp.png",
-"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit atque vero optio libero ab cumque! Nesciunt assumenda, et ratione ex aut, dolorem praesentium illo laboriosam natus laborum quia distinctio! Quam ipsam fuga"
+"ToDoApp was een school project van vorige jaar waar je een lijst kan maken met dingen doe je nog moet doen. je kan een nieuwe taak toevoegen, afvinken en verwijderen en word automatisch opgeslagen als je een aanpassing maakt. Er was ook een trash bin waar alles wat je verwijderd heb inkomt te staan Daardoor kan je terug zien wat je gedaan hebt of de taak terug halen als je het perongelijk verwijderd hebt. Ik heb met dit project veel geleerd over het opslaan van data en over Unitys Vertical layout group."
 ,"ToDoApp");
 
 let WorkArray = [work1,work2,work3,work4,work5,work6];
@@ -63,21 +63,18 @@ function myfunction() {
   }
 
   function ShowNeighbour(neighbour){
-    if (neighbour == "true"){
+    lastindex = parseInt(lastindex);
+    if (neighbour == "true")
+    {
       if (lastindex + 1 > WorkArray.length - 1) lastindex = -1;
-      parseInt(lastindex);
       displayWork(lastindex + 1)
-      console.log("true next");
-    }else if (neighbour == "false"){
+    } else
+    if (neighbour == "false"){
       if (lastindex - 1 < 0) lastindex = WorkArray.length;
-
-      console.log("false previous");
       displayWork(lastindex - 1)
-    } else{
-      console.log("Not working");
     }
-    
   }
+
 
   function HideWork(){
     if (document.getElementById("overlay").style.display == "block")
