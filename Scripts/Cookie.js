@@ -18,6 +18,7 @@ const checkCookie = () => {
   //Check for our cookie
   if (input[0] == "myCookieName") {
     //Hide the popup
+    print("test");
     popUp.classList.add("hide");
     popUp.classList.remove("show");
   } else {
