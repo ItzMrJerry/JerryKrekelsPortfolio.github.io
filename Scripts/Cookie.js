@@ -10,19 +10,22 @@ document.getElementById("acceptCookie").addEventListener("click", () => {
   //Hide the popup
   popUp.classList.add("hide");
   popUp.classList.remove("show");
+  console.log("ButtonClicked");
 });
 //Check if cookie is already present
 const checkCookie = () => {
   //Read the cookie and split on "="
+  console.log("check");
   let input = document.cookie.split("=");
   //Check for our cookie
   if (input[0] == "myCookieName") {
     //Hide the popup
-    print("test");
+    console.log("hide");
     popUp.classList.add("hide");
     popUp.classList.remove("show");
   } else {
     //Show the popup
+    console.log("show");
     popUp.classList.add("show");
     popUp.classList.remove("hide");
   }
